@@ -1,0 +1,69 @@
+name: nevergiveup
+description: "Eletan Software Technology - Biometric & Admin Portal"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Media
+  cupertino_icons: ^1.0.9
+  video_player: ^2.11.1
+  url_launcher: ^6.3.0
+  http: ^1.1.0
+  device_info_plus: ^10.1.0
+
+  # Camera & File Handling
+  camera: ^0.12.0+1
+
+  camera_android_camerax: ^0.7.2
+  camera_platform_interface: ^2.13.0
+  image_picker: ^1.2.2
+  file_picker: ^8.0.0
+  path_provider: ^2.1.0
+  path: ^1.9.1
+  gal: ^2.3.2
+  permission_handler: ^12.0.1
+
+  # Biometrics & AI (FaceFlow Integration)
+  google_mlkit_face_detection: ^0.11.0
+  google_mlkit_face_mesh_detection: ^0.2.1
+  google_ml_kit: ^0.18.1
+  tflite_flutter: ^0.12.1
+  image: ^4.8.0
+
+  # Database
+  sqflite: ^2.4.2+1
+  ultralytics_yolo: ^0.2.0
+#  tensorflow_lite_flutter: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+  # Icon Generator
+  flutter_launcher_icons: ^0.13.1
+
+# Icon Configuration
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/eletan_icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#050505" # Matches your ServicesScreen theme
+  adaptive_icon_foreground: "assets/icon/eletan_icon.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/mobilefacenet.tflite
+    - assets/videos/splash_bg.mp4
+    - assets/icon/eletan_icon.png
+    - assets/yolov8n_float16.tflite
